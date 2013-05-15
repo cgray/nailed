@@ -1,6 +1,6 @@
 <?php
-define("CACHE_PATH", dirname(__FILE__)."/.cache");
-define("CACHE_LIFETIME", isset($_GET["cache_lifetime"])?$_GET["cache_lifetime"]:12000);
+define("CACHE_PATH", dirname(__FILE__).$_ENV["NAILED_CACHE_PATH"]);
+define("CACHE_LIFETIME", isset($_ENV["NAILED_CACHE_LIFETIME"])?$_ENV["NAILED_CACHE_LIFETIME"]:12000);
 $path = $_GET["path"];
 $document_root = $_SERVER["DOCUMENT_ROOT"];
 
